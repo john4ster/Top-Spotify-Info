@@ -1,0 +1,157 @@
+.title {
+  font-size:25px;
+  color: black;
+  background:#1DB954;
+  padding:0.5px;
+  margin-bottom:60px;
+  border-bottom: 10px solid black;
+  display:flex;
+  justify-content: space-between;
+}
+
+.title h1 {
+  margin-left:8px;
+}
+
+.loginButton {
+  height:50px;
+  margin-top:40px;
+  margin-right:10px;
+  background-color: black;
+  color : #1DB954;
+  border-radius: 20px;
+  border-color: #1DB954;
+  cursor: pointer;
+}
+
+body {
+  height: 100%;
+  background-color: #789fbb;
+  margin: 0;
+}
+
+.content {
+  min-height: 100%;
+}
+
+.contentInside {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+footer {
+  color:black;
+  background-color: #1DB954;
+  height: 50px;
+  margin-top: 540px;
+  width: 100%;
+  border-top: 5px solid black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topLists {
+  display:flex;
+  justify-content:space-around;
+}
+
+.topLists h2 {
+  background: #1DB954;
+  padding:10px;
+  text-align: center;
+  border: 3px solid black;
+}
+
+.modalbg {
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.9);
+  position:absolute;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  top:0;
+  display:none;
+}
+
+.signInModal {
+  width: 500px;
+  height: 300px;
+  background-color:white;
+  text-align: center;
+  border-radius: 10px;
+} 
+
+.signInModal h1 {
+  background-color: #1DB954;
+  padding:20px;
+  margin-top:0px;
+  border-bottom: solid 8px black;
+}
+
+.signInModal p {
+  font-size:20px;
+}
+
+.modalLoginButton {
+  display:inline-block;
+  margin-top:70px;
+  background-color:#1DB954;
+  color:black;
+  text-decoration:none;
+  font-size:30px;
+  padding:10px;
+  border-radius:10px;
+  font-weight:bold;
+  border: solid 2px black;
+}
+
+.topTracksList {
+  display: flex;
+  flex-direction: column;
+}
+
+.topArtistsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.albumCover {
+  padding-right: 40px;
+  margin-top: 30px;
+}
+
+.trackTitle {
+  font-weight: bolder;
+  margin-top: 3px;
+}
+
+.artists {
+  margin-top: -15px;
+}
+
+.artistPicture {
+  padding-right: 40px;
+  margin-top: 30px;
+}
+
+.artistName {
+  font-weight: bolder;
+  margin-top: 3px;
+}
+
+.artistGenre {
+  margin-top: -15px;
+}
+
+footer p {
+  margin-right: 10px;
+  margin-top:15px;
+  font-size: 20px;
+}
+
+footer img{
+  color: white;
+  width: 50px;
+  height: 50px;
+}
