@@ -1,3 +1,4 @@
+profileInfo = document.querySelector('.profileInfo')
 topTracksList = document.querySelector('.topTracksList');
 topArtistsList = document.querySelector('.topArtistsList');
 footer = document.querySelector("#footer");
@@ -54,6 +55,28 @@ document.querySelector('.loginButton').addEventListener('click', function showLo
       //Change the footer's position so it's below the page content
       footer.style.marginTop = "-50px";
 
+      //Make an ajax call to get the user's profile picture and username
+      $.ajax({
+        url: 'https://api.spotify.com/v1/me',
+        headers: {
+          'Authorization': 'Bearer ' + access_token
+        },
+        success: function(response) {
+          //Display user's username
+          let userName = document.createElement('p');
+          userName.className = 'userName';
+          userName.innerText = response.display_name;
+          profileInfo.append(userName);
+          //Display user's profile picture
+          let profilePicture = document.createElement('img');
+          profilePicture.className = 'profilePicture';
+          profilePicture.src = response.images[0].url;
+          profilePicture.height = "100";
+          profilePicture.width = "100";
+          profileInfo.append(profilePicture);
+        }
+      })
+
       //Make an ajax call to get the top tracks
       $.ajax({
           url: 'https://api.spotify.com/v1/me/top/tracks',
@@ -66,17 +89,17 @@ document.querySelector('.loginButton').addEventListener('click', function showLo
             {
               //Show album cover
               let albumCover = document.createElement('img');
-              albumCover.className = "albumCover";
+              albumCover.className = 'albumCover';
               albumCover.src = response.items[i].album.images[1].url;
               topTracksList.append(albumCover);
               //Show track title
               let trackTitle = document.createElement('h3');
-              trackTitle.className = "trackTitle";
+              trackTitle.className = 'trackTitle';
               trackTitle.innerHTML = response.items[i].name;
               topTracksList.append(trackTitle);
               //Show artists
               let artists = document.createElement('p');
-              artists.className = "artists";
+              artists.className = 'artists';
               let artistList = response.items[i].artists;
               artists.innerHTML = artistList[0].name;
               topTracksList.append(artists);
@@ -95,17 +118,17 @@ document.querySelector('.loginButton').addEventListener('click', function showLo
           {
             //Show artist picture
             let artistPicture = document.createElement('img');
-            artistPicture.className = "artistPicture";
+            artistPicture.className = 'artistPicture';
             artistPicture.src = response.items[i].images[1].url;
             topArtistsList.append(artistPicture);
             //Show artist name
             let artistName = document.createElement('h3');
-            artistName.className = "artistName";
+            artistName.className = 'artistName';
             artistName.innerHTML = response.items[i].name;
             topArtistsList.append(artistName);
             //Show artist genres
             let artistGenre = document.createElement('p');
-            artistGenre.className = "artistGenre";
+            artistGenre.className = 'artistGenre';
             artistGenre.innerHTML = response.items[i].genres[0];
             topArtistsList.append(artistGenre);
           }

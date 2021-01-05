@@ -1,9 +1,9 @@
 # My Top Spotify Info
-Web app that allows the user to login with their Spotify account and see their top 10 tracks and top 10 artists using the Spotify API.
+Web app that allows the user to login with their Spotify account and see their top 20 tracks and top 20 artists using the Spotify API.
 
 # What I Learned
 * How an API works
-* How to get data from and API and display it to the user
+* How to get data from an API and display it to the user
 * How to use jQuery
 * How Ajax works
 

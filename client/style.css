@@ -9,6 +9,21 @@
   justify-content: space-between;
 }
 
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.profileInfo {
+  display:flex;
+  flex-direction: row;
+}
+
 .title h1 {
   margin-left:8px;
 }
@@ -104,6 +119,17 @@ footer {
   border-radius:10px;
   font-weight:bold;
   border: solid 2px black;
+}
+
+.profilePicture {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.userName {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .topTracksList {
