@@ -5,7 +5,7 @@ Web app that allows the user to login with their Spotify account and see their t
 * Must have a clientID and clientSecret from Spotify for Developers
 * In server/authorization_code/app.js, replace the client_id and client_secret variables with your own
 * Run "nodemon app.js" from the authorization_code directory
-* Go to localhost:8888 and login
+* Go to localhost:8888 and login with your Spotify Account
 
 # What I Learned
 * How an API works
