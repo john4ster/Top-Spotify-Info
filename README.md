@@ -1,4 +1,4 @@
-# My Top Spotify Info
+# Top Spotify Info
 Web app that allows the user to login with their Spotify account and see their top 20 tracks and top 20 artists using the Spotify API.
 
 # How to run
